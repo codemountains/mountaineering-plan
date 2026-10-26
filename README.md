@@ -12,6 +12,7 @@
 | [mountaineering-plan.md](./mountaineering-plan.md) | ソースに追加する詳細資料。既存の§0〜§87と専門情報・情報源・出力項目を保持し、適用条件・計算例・確認項目を補足 |
 | [README.md](./README.md) | 概要と利用方法 |
 | [plugin/](./plugin/README.md) | プラグインのマニフェスト、スキル、同梱資料、ローカル配布設定、同期スクリプト |
+| [docs/create-plugin-with-plugin-creator.md](./docs/create-plugin-with-plugin-creator.md) | Web 版 ChatGPT の Plugin Creator で作成し、保存内容と動作を確認する手順 |
 
 このリポジトリで提供するのは Markdown 形式の指示と参照資料、およびそれらを同梱したプラグインです。アプリケーションのビルドは不要です。
 
@@ -40,6 +41,8 @@
 ## 使い方
 
 ### プラグインで使う
+
+Web 版 ChatGPT で作成する場合は、[Plugin Creator を使った作成手順](./docs/create-plugin-with-plugin-creator.md)を参照してください。添付する3ファイル、作成プロンプト、保存済み資料の確認、試用・更新の方法をまとめています。
 
 プラグインの実装はすべて [plugin/](./plugin/README.md) にあります。ローカル marketplace への登録・インストール・更新方法は、[プラグインの利用手順](./plugin/README.md#ローカルで使う)を参照してください。
 

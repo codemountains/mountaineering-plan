@@ -53,6 +53,8 @@ codex plugin list --marketplace mountaineering-plan-local
 
 ## Web 版で作成済みのプラグインに反映する
 
+新規作成する場合は、[Plugin Creator を使った作成手順](../docs/create-plugin-with-plugin-creator.md)を参照してください。
+
 ローカルの変更は、Plugin Creator で作成済みの Web 版プラグインには自動反映されません。Web 版の Plugins から対象プラグインの Edit Plugin を開き、`skills/mountaineering-plan/agents/openai.yaml` を添付して次のように依頼してください。
 
 ```text
