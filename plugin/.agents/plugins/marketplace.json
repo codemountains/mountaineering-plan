@@ -1,0 +1,20 @@
+{
+  "name": "mountaineering-plan-local",
+  "interface": {
+    "displayName": "登山計画"
+  },
+  "plugins": [
+    {
+      "name": "mountaineering-plan",
+      "source": {
+        "source": "local",
+        "path": "./"
+      },
+      "policy": {
+        "installation": "AVAILABLE",
+        "authentication": "ON_INSTALL"
+      },
+      "category": "Productivity"
+    }
+  ]
+}

@@ -1,0 +1,27 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "mountaineering-plan",
+  "version": "1.0.0",
+  "description": "山岳気象・登山ルート・公共交通・現地状況を統合し、登山口へのアクセスから安全な下山・帰宅までの計画を支援します。",
+  "author": {
+    "name": "codemountains"
+  },
+  "repository": "https://github.com/codemountains/mountaineering-plan",
+  "keywords": ["mountaineering", "hiking", "weather", "public-transport", "登山計画"],
+  "extensions": {
+    "com.openai": {
+      "interface": {
+        "displayName": "登山計画",
+        "shortDescription": "気象・ルート・公共交通から登山と帰宅の計画を支援",
+        "longDescription": "公共交通を利用する日帰り登山を中心に、気象、登山道、往復交通、行動時間、撤退時刻、時間余裕、代替案を検討します。最新情報の確認には利用環境の Web 検索・資料閲覧機能を使います。",
+        "developerName": "codemountains",
+        "category": "Productivity",
+        "defaultPrompt": [
+          "予定日と出発駅をもとに、公共交通での日帰り登山を帰宅まで計画してください。",
+          "予定している山の気象と登山道の状況を確認してください。",
+          "登山計画の撤退時刻と最終交通までの余裕を確認してください。"
+        ]
+      }
+    }
+  }
+}

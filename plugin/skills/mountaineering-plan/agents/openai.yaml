@@ -1,0 +1,4 @@
+interface:
+  display_name: "登山計画"
+  short_description: "気象・登山道・公共交通を確認し、撤退時刻と帰宅までの登山計画を支援"
+  default_prompt: "$mountaineering-plan を使い、往復交通・気象・登山道・撤退時刻を含む登山計画を作成してください。"
