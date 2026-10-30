@@ -15,8 +15,8 @@ Web 版 ChatGPT で、利用するアカウント・ワークスペースを選�
 | 添付ファイル | このリポジトリのファイル | 役割 |
 | --- | --- | --- |
 | `SKILL.md` | [plugin/skills/mountaineering-plan/SKILL.md](../plugin/skills/mountaineering-plan/SKILL.md) | 適用条件、基本指示の読み込み、質問に応じた詳細資料の参照方法 |
-| `project-instructions.md` | [project-instructions.md](../project-instructions.md) | スキル使用時に適用する基本指示 |
-| `mountaineering-plan.md` | [mountaineering-plan.md](../mountaineering-plan.md) | 分野別の判断手順、全節と付録を含む詳細資料 |
+| `project-instructions.md` | [project-instructions.md](../plugin/skills/mountaineering-plan/references/project-instructions.md) | スキル使用時に適用する基本指示 |
+| `mountaineering-plan.md` | [mountaineering-plan.md](../plugin/skills/mountaineering-plan/references/mountaineering-plan.md) | 分野別の判断手順、全節と付録を含む詳細資料 |
 
 リポジトリをダウンロードした場合は、表のパスにある実ファイルを選択します。ブラウザーで GitHub から取得する場合は、各ファイルの Raw 表示などから本文を保存し、HTML ページを添付しないようにします。
 
@@ -45,8 +45,8 @@ Web 版 ChatGPT で、利用するアカウント・ワークスペースを選�
 - project-instructions.md：スキル使用時に適用する基本指示
 - mountaineering-plan.md：必要な節を参照する詳細資料
 
-資料中の「プロジェクトの指示」「プロジェクトソース」は、
-このプラグインの基本指示・同梱参照資料として扱ってください。
+基本指示と詳細資料はスキルの references/ に同梱し、
+スキル使用時に直接読み込んでください。
 SKILL.md の参照先を、実際に同梱する資料に合わせてください。
 詳細資料の全節と付録を保持してください。
 
@@ -100,7 +100,7 @@ Plugin Creator の案内に従い、名前・説明・同梱資料を確認し�
 5. 保存された mountaineering-plan.md の節・付録の見出し一覧
 
 SKILL.md のリンク先に資料が存在し、基本指示が使用時に読み込まれること、
-「プロジェクトの指示」「プロジェクトソース」が同梱資料として扱われること、
+基本指示と詳細資料がスキルから直接読み込まれること、
 詳細資料の全節と付録が添付原本から欠落していないことを確認してください。
 確認できない項目は未確認としてください。
 ```
@@ -161,7 +161,7 @@ skills/mountaineering-plan/
 
 「検索しない条件」は未確認情報の扱いを試すためのものです。実際に検索機能が利用できない環境の確認とは区別します。最新情報を調べる試用も行い、出典と対象・更新・確認日時が示されるか、取得できない情報は未確認とされるかを確認してください。出典に更新日時が記載されていない場合、推測で埋めないことも確認します。
 
-さらに、[詳細資料の付録A・B](../mountaineering-plan.md#付録a境界条件の回答例)に沿って境界条件と回答前の確認項目を試せます。作成・保存の成功と、実際の回答品質の確認は別です。
+さらに、[詳細資料の付録A・B](../plugin/skills/mountaineering-plan/references/mountaineering-plan.md#付録a境界条件の回答例)に沿って境界条件と回答前の確認項目を試せます。作成・保存の成功と、実際の回答品質の確認は別です。
 
 ## 7. 修正・資料更新を反映する
 
@@ -178,7 +178,7 @@ skills/mountaineering-plan/
 保存後、変更したファイルと参照先、バージョンを示してください。
 ```
 
-ローカルファイルの変更は、Plugin Creator で保存したプラグインには自動反映されません。更新後は保存済みファイルを再確認し、新しい会話で同じ質問を試してください。ローカル用プラグインの同期・更新方法は、[plugin/README.md](../plugin/README.md#資料を更新する)にあります。
+ローカルファイルの変更は、Plugin Creator で保存したプラグインには自動反映されません。原本は `plugin/skills/mountaineering-plan/` 内で管理し、変更したファイルを添付して反映します。更新後は保存済みファイルを再確認し、新しい会話で同じ質問を試してください。ローカル用プラグインの更新方法は、[plugin/README.md](../plugin/README.md#資料を更新する)にあります。
 
 ## 困ったとき
 

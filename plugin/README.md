@@ -14,7 +14,6 @@ plugin/
 │   └── references/
 │       ├── project-instructions.md
 │       └── mountaineering-plan.md
-├── scripts/sync_references.py
 └── README.md
 ```
 
@@ -73,20 +72,18 @@ codex plugin list --marketplace mountaineering-plan-local
 
 旧名でインストール済みの場合、新しい識別子は別プラグインとして扱われます。改名後のリポジトリから「ローカルで使う」のコマンドで登録・インストールし、動作確認後、不要な旧プラグインをプラグイン管理画面から削除してください。ルートディレクトリを移動した場合も、新しい場所で marketplace を登録し直してください。
 
-ChatGPT プロジェクトの資料は `mountaineering-plan.md` に差し替え、基本指示内の参照名も更新してください。Plugin Creator で作成した Web 版では、資料の差し替えと参照先の更新も依頼してください。
+以前の ChatGPT プロジェクト向け構成を利用していた場合も、今後の更新はこのプラグインのスキルに集約します。Plugin Creator で作成した Web 版では、同梱資料の差し替えと参照先の更新も依頼してください。
 
 GitHub のリポジトリ URL は現在の公開先を記載しています。ローカルのルートディレクトリ名の変更とは別に管理します。
 
 ## 資料を更新する
 
-原本はリポジトリ直下の `project-instructions.md` と `mountaineering-plan.md` です。同梱コピーを直接編集せず、原本を編集した後、リポジトリのルートで次を実行します。
+原本はこのプラグイン内の次の2ファイルです。直接編集し、変更をコミットしてください。
 
-```sh
-python3 plugin/scripts/sync_references.py
-python3 plugin/scripts/sync_references.py --check
-```
+- [基本指示](skills/mountaineering-plan/references/project-instructions.md)
+- [詳細資料](skills/mountaineering-plan/references/mountaineering-plan.md)
 
-同期には Python 3 の標準ライブラリだけを使います。`--check` は原本と同梱コピーのバイト単位の一致を検査し、不一致・欠落があれば非ゼロで終了します。生成されたコピーも原本と一緒にコミットしてください。
+リポジトリ直下の旧原本と同期スクリプトは廃止しました。詳細資料の改訂時は版番号・更新日も更新し、`SKILL.md` の参照先と必要な節・付録が維持されていることを確認してください。
 
 スキルの適用条件・資料の読み方は `skills/mountaineering-plan/SKILL.md`、スキルの表示名は `skills/mountaineering-plan/agents/openai.yaml`、プラグインの表示情報・バージョンは `plugin.json` で管理します。リリース時はプラグインのバージョンも更新します。資料の版番号とは別管理です。
 
